@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.mostafa.android.rehanadoctors.MainActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:src="@drawable/logo2"
+        android:scaleType="fitCenter"
+        android:padding="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:background="@color/white"
+            android:textColor="@color/green"
+            android:shadowColor="@color/white"
+            android:id="@+id/coupon"
+            android:text="@string/coupon" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:shadowColor="@color/white"
+            android:layout_weight="1"
+            android:id="@+id/calculates"
+            android:textColor="@color/green"
+            android:background="@color/white"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:text="@string/calculations" />
+    </LinearLayout>
+
+</LinearLayout>

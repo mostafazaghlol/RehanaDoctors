@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">RehanaDoctors</string>
+    <string name="coupon">coupon</string>
+    <string name="calculations">calculations</string>
+    <string name="hello">h e l l o !</string>
+    <string name="paragraph">You can use your Fingerprint  to grant access to the app.</string>
+    <string name="email">Email address</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="forgetPassword">Forget password?</string>
+    <string name="StillNoAccount">Still without account?</string>
+    <string name="CreateAccount">create one</string>
+    <string name="signup">S I G N  U P</string>
+    <string name="paragraphSignup">Create an account to use Rehana  without limits.for free</string>
+    <string name="Fullname">Full Name</string>
+    <string name="Phone">Phone</string>
+    <string name="Repeatpassword">Repeat Password</string>
+    <string name="signupbt">Sign up</string>
+    <string name="Alreadyhave">I already have an account.</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="Home">H O M E</string>
+    <string name="surgeries">Surgeries</string>
+    <string name="Nonsurgeries">Non-surgical operation</string>
+    <string name="processes">Hair and other processes</string>
+    <string name="inquiries">inquiries</string>
+    <string name="vision">our vision</string>
+    <string name="callus">call us</string>
+
+    <string name="first_button">Lip ,Nose And Eyeling Surgery</string>
+    <string name="second_button">Injet the face Legs And Buttocks</string>
+    <string name="third_button">lighten the skin and sensitive areas of glutamium spanish </string>
+    <string name="fourth_button">Lighten the skin and sensetive areas of glutamium spanish </string>
+    <string name="fifth_button">botox and filler injectios</string>
+
+    <string name="eighth_button">weight loss ,tensing and laser body sculpting</string>
+
+    <string name="sixth_button">Removal of Excess hair cellulite and laser white lines</string>
+    <string name="seventh_button">Enlarging and reducing the size of the chest and tighten the dilution</string>
+
+
+    <string name="item_servecies">Services</string>
+    <string name="item_profile">Profile</string>
+    <string name="item_book">Booking</string>
+    <string name="item_calculate">Calculate the cost</string>
+    <string name="item_reservations">Comfirmed Reservations</string>
+    <string name="item_coupon">Coupon</string>
+    <string name="item_offers">Offers</string>
+    <string name="item_LOGOUT">Log out</string>
+    <string name="chooseyourserv">Choose your services</string>
+    <string name="eyeleftprocess">Eye Lift Process</string>
+    <string name="rhinoplastv">Rhinoplasty</string>
+    <string name="theprocessoffateinjection">The Process Of Fat Injection</string>
+    <string name="Embellrsktheear" translatable="false">Embellrsk The Ear</string>
+    <string name="introduction">Introduction</string>
+    <string name="Rate">Rate</string>
+    <string name="quit">caution Quit</string>
+    <string name="quitQuestion">Do you want to go out ?</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="more">M o r e</string>
+    <string name="RateServices">rate services</string>
+    <string name="Thanks">Thanks</string>
+    <string name="ServicesType">Services Type</string>
+    <string name="TimeandDate">Time and Date</string>
+    <string name="finish">finish</string>
+    <string name="save">Save</string>
+    <string name="EyelidTightening">Eyelid tightening</string>
+    <string name="LipGlossProcess">Lip Gloss process</string>
+    <string name="processofTon">The process of Toning and Strengthening the jaws</string>
+    <string name="processoffat">the process of fat injection</string>
+    <string name="breastimplants">Breast implants</string>
+    <string name="selectYourPic">Select your Picture ,Edit</string>
+    <string name="selectServices">Select Services</string>
+    <string name="Description">Description</string>
+    <string name="DescriptionYourAge">Describe your age and some details of your situation</string>
+    <string name="send">send</string>
+    <string name="getDate">DATE: 20-10-2017</string>
+    <string name="myreservation">My Reservations</string>
+    <string name="Offers">Offers</string>
+    <string name="fackoffer">50% Eye Left Pocessor</string>
+    <string name="FakeDate">Fack data</string>
+    <string name="goout">Logout</string>
+    <string name="dogoout">Do you want to go out ?</string>
+    <string name="item_home">Home</string>
+    <string name="InvalidDate">invalid date choose  a future date.</string>
+    <string name="again">again</string>
+    <string name="rememberme">Remember me</string>
+    <string name="checkit">search</string>
+    <string name="item_contact">Contact us</string>
+    <string name="item_about">About Us</string>
+    <string name="item_reservations2">Waited Reservations</string>
+    <string name="myComfirmedreservation">Confirmed Reservations</string>
+    <string name="mywaitedreservation">Waited Reservations</string>
+    <string name="phone_sales">sales : </string>
+    <string name="phone_support">support : </string>
+    <string name="choosePic">take a picture</string>
+    <string name="picfromstudio">Photo from the studio</string>
+    <string name="cancel">cancel</string>
+    <string name="chossePicture">"Add an image!"</string>
+    <string name="item_old_calculate">Old calculations</string>
+    <string name="item_new_calculate">New calculations</string>
+    <string name="okay">Okay</string>
+    <string name="mustlog">You must login !</string>
+    <string name="writedescription">Write the description</string>
+    <string name="choosePicture">Select a picture</string>
+    <string name="calculatecost">Cost calculation underway</string>
+    <string name="pleasewait">Please wait a bit .....</string>
+    <string name="pick">pick</string>
+    <string name="nocoupun">There is no coupons</string>
+    <string name="addcouopn">add coupon</string>
+    <string name="delete">Delete</string>
+    <string name="submite">submit</string>
+</resources>
