@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -54,33 +55,36 @@ public class RVAdaptercopuon extends RecyclerView.Adapter<RVAdaptercopuon.Person
     }
 
     @Override
-    public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
+    public void onBindViewHolder(final PersonViewHolder personViewHolder, int i) {
         personViewHolder.coupondata.setText(coupons.get(i).comment);
         final String id_coupon = coupons.get(i).id_coupon;
-//        personViewHolder.pick.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Response.Listener<String> listener = new Response.Listener<String>() {
-//                    @Override
-//                    public void onResponse(String response) {
-//                        try {
-//                            JSONObject jsonObject = new JSONObject(response);
-//                            JSONArray jsonArray = jsonObject.getJSONArray("message");
-//                            for (int i=0;i<jsonArray.length();i++){
-//                                String message = jsonArray.getJSONObject(i).getString("message");
-//                                Toast.makeText(mContext, ""+message, Toast.LENGTH_SHORT).show();
-//                            }
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//                        }
-//
-//                    }
-//                };
-//                couponpickRequest couponpickRequest = new couponpickRequest("1",id_client,id_coupon, listener);
-//                RequestQueue queue = Volley.newRequestQueue(mContext);
-//                queue.add(couponpickRequest);
-//            }
-//        });
+        personViewHolder.pick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Response.Listener<String> listener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray jsonArray = jsonObject.getJSONArray("data");
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                String message = jsonArray.getJSONObject(i).getString("message");
+                                Toast.makeText(mContext, "" + message, Toast.LENGTH_SHORT).show();
+                                if (message.equals("Successfully deleted")) {
+                                    personViewHolder.linearLayout.setVisibility(View.GONE);
+                                }
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+                coupondeletekRequest coupondeleteRequest = new coupondeletekRequest("1", id_coupon, listener);
+                RequestQueue queue = Volley.newRequestQueue(mContext);
+                queue.add(coupondeleteRequest);
+            }
+        });
     }
 
     @Override
@@ -92,6 +96,7 @@ public class RVAdaptercopuon extends RecyclerView.Adapter<RVAdaptercopuon.Person
         CardView cv;
         TextView coupondata;
         Button pick;
+        LinearLayout linearLayout;
 
 
         PersonViewHolder(View itemView) {
@@ -99,20 +104,20 @@ public class RVAdaptercopuon extends RecyclerView.Adapter<RVAdaptercopuon.Person
             cv = (CardView) itemView.findViewById(R.id.cv10);
             cv.setCardBackgroundColor(Color.WHITE);
             cv.setRadius(100);
+            linearLayout = (LinearLayout) itemView.findViewById(R.id.linear22);
             coupondata = (TextView) itemView.findViewById(R.id.coupondata);
             pick = (Button)itemView.findViewById(R.id.pick);
         }
     }
 
-    public class couponpickRequest extends StringRequest {
-        private static final String pickurl="http://raihana-eg.com/site_api/api/activation_coupon";
+    public class coupondeletekRequest extends StringRequest {
+        private static final String pickurl = "http://raihana-eg.com/site_api/api/delete_coupon";
         private Map<String,String> params;
 
-        public couponpickRequest(String lang,String id_client,String id_coupon,Response.Listener<String> listener){
+        public coupondeletekRequest(String lang, String id_coupon, Response.Listener<String> listener) {
             super(Method.POST,pickurl,listener,null);
             params = new HashMap<>();
             params.put("lang",lang);
-            params.put("id_client",id_client);
             params.put("id_coupon",id_coupon);
 
         }

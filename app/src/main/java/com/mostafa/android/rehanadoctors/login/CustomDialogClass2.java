@@ -26,7 +26,7 @@ public class CustomDialogClass2 extends Dialog {
     public Activity c;
     private EditText userEditText;
     private Button search;
-    String lan="2";
+    String lan = "1";
 
     public CustomDialogClass2(Activity a) {
         super(a);
@@ -38,7 +38,7 @@ public class CustomDialogClass2 extends Dialog {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.custom_dialog_for_coupon);
+        setContentView(R.layout.custom_dialog_for_forget);
         userEditText = (EditText)findViewById(R.id.editText);
         search = (Button)findViewById(R.id.button);
 

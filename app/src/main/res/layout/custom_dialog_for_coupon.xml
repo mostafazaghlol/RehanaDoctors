@@ -6,13 +6,32 @@
     android:padding="20dp">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/clientcount"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="comment"
+        android:hint="@string/client_count"
         android:inputType="textPersonName"
         android:textAlignment="viewStart" />
+
+    <EditText
+        android:id="@+id/comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/comment"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart" />
+
+    <EditText
+        android:id="@+id/totalcount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/totalcount"
+        android:inputType="textPersonName"
+        android:textAlignment="viewStart" />
+
 
     <Button
         android:id="@+id/button"

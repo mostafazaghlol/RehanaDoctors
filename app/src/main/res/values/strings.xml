@@ -115,4 +115,8 @@
     <string name="addcouopn">add coupon</string>
     <string name="delete">Delete</string>
     <string name="submite">submit</string>
+    <string name="client_count">client count</string>
+    <string name="comment">comment</string>
+    <string name="totalcount">total count</string>
+    <string name="search">search</string>
 </resources>

@@ -132,7 +132,7 @@ public class couponActivity extends AppCompatActivity {
     }
 
     public class couponRequest extends StringRequest{
-        private final static String url="http://raihana-eg.com/site_api/api/coupon";
+        private final static String url = "http://raihana-eg.com/site_api/api/dr_coupon";
         private Map<String,String> params;
 
         public couponRequest(String lang, Response.Listener<String> listener)
