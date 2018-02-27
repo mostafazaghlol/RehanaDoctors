@@ -11,6 +11,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.mostafa.android.rehanadoctors.R;
+import com.mostafa.android.rehanadoctors.images;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -69,7 +70,7 @@ public class Signup extends AppCompatActivity {
                     }
                 };
 
-                RegisterRequest registerRequest = new RegisterRequest(name, phone, email, "2", password, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(name, phone, email, images.lang, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Signup.this);
                 queue.add(registerRequest);
             }

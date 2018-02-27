@@ -13,6 +13,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.mostafa.android.rehanadoctors.R;
+import com.mostafa.android.rehanadoctors.images;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -70,8 +71,7 @@ public class CustomDialogClass2 extends Dialog {
                         }
                     }
                 };
-
-                forgetRequest forgetRequest= new forgetRequest(userEditText.getText().toString().trim(), lan, responseListener);
+                forgetRequest forgetRequest = new forgetRequest(userEditText.getText().toString().trim(), images.lang, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(c);
                 queue.add(forgetRequest);
 

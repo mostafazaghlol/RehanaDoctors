@@ -14,6 +14,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.mostafa.android.rehanadoctors.R;
+import com.mostafa.android.rehanadoctors.images;
 import com.mostafa.android.rehanadoctors.login.forgetRequest;
 
 import org.json.JSONArray;
@@ -70,6 +71,9 @@ public class CustomDialogAddCoupon extends Dialog {
                                                           JSONObject respons = jsonArray.getJSONObject(i);
                                                           String message = respons.getString("message");
                                                           Toast.makeText(c, " " + message, Toast.LENGTH_LONG).show();
+                                                          commentEditText.setText("");
+                                                          clientcountEditText.setText("");
+                                                          totalcountEditText.setText("");
                                                       }
 
 
@@ -78,8 +82,7 @@ public class CustomDialogAddCoupon extends Dialog {
                                                   }
                                               }
                                           };
-
-                                          addcouponRequest addcouponRequest = new addcouponRequest(lan, clientcount, totalcount, comment, responseListener);
+                                          addcouponRequest addcouponRequest = new addcouponRequest(images.lang, clientcount, totalcount, comment, responseListener);
                                           RequestQueue queue = Volley.newRequestQueue(c);
                                           queue.add(addcouponRequest);
 

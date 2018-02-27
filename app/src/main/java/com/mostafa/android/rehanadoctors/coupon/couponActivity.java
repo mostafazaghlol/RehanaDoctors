@@ -2,6 +2,7 @@ package com.mostafa.android.rehanadoctors.coupon;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -24,6 +25,7 @@ import com.android.volley.Response;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.mostafa.android.rehanadoctors.R;
+import com.mostafa.android.rehanadoctors.images;
 import com.mostafa.android.rehanadoctors.login.CustomDialogClass2;
 import com.mostafa.android.rehanadoctors.login.Login;
 
@@ -85,7 +87,7 @@ public class couponActivity extends AppCompatActivity {
 
             }
         };
-        couponRequest couponRequest= new couponRequest("1", listener);
+        couponRequest couponRequest = new couponRequest(images.lang, listener);
         RequestQueue queue = Volley.newRequestQueue(couponActivity.this);
         queue.add(couponRequest);
 
@@ -95,6 +97,12 @@ public class couponActivity extends AppCompatActivity {
                 CustomDialogAddCoupon cdd = new CustomDialogAddCoupon(couponActivity.this);
                 cdd.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
                 cdd.show();
+                cdd.setOnCancelListener(new DialogInterface.OnCancelListener() {
+                    @Override
+                    public void onCancel(DialogInterface dialogInterface) {
+                        recreate();
+                    }
+                });
             }
         });
 

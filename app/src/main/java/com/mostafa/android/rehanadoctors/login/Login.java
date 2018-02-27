@@ -24,6 +24,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.mostafa.android.rehanadoctors.R;
+import com.mostafa.android.rehanadoctors.images;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -152,8 +153,7 @@ public class Login extends AppCompatActivity {
                 }
             }
         };
-
-        LoginRequest loginPatiRequest = new LoginRequest(user, pass, "1", responseListener);
+        LoginRequest loginPatiRequest = new LoginRequest(user, pass, images.lang, responseListener);
         RequestQueue queue = Volley.newRequestQueue(Login.this);
         queue.add(loginPatiRequest);
 

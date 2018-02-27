@@ -11,7 +11,16 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/client_count"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:textAlignment="viewStart" />
+
+    <EditText
+        android:id="@+id/totalcount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/totalcount"
+        android:inputType="number"
         android:textAlignment="viewStart" />
 
     <EditText
@@ -23,14 +32,6 @@
         android:inputType="textPersonName"
         android:textAlignment="viewStart" />
 
-    <EditText
-        android:id="@+id/totalcount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/totalcount"
-        android:inputType="textPersonName"
-        android:textAlignment="viewStart" />
 
 
     <Button
