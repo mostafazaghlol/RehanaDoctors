@@ -14,8 +14,10 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.mostafa.android.rehanadoctors.calculations.calculationsActivity;
 import com.mostafa.android.rehanadoctors.coupon.coupon;
 import com.mostafa.android.rehanadoctors.coupon.couponActivity;
+import com.mostafa.android.rehanadoctors.calculations.calculationsActivity;
 import com.mostafa.android.rehanadoctors.login.Login;
 
 public class MainActivity extends AppCompatActivity {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("pref", 0);
         final Intent loginIntent = new Intent(this,Login.class);
         final Intent couponIntent = new Intent(this, couponActivity.class);
+        final Intent ResIntent = new Intent(this, calculationsActivity.class);
 
 
         coupons.setOnClickListener(new View.OnClickListener() {
@@ -50,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (sharedPreferences.contains("user") && sharedPreferences.getInt("login", 0) == 1) {
-//                    Intent ResIntent = new Intent(this, WaitedReservationsActivity.class);
-//                    startActivity(ResIntent);
+                    startActivity(ResIntent);
                 } else {
                     Toast.makeText(getApplicationContext(), "" + getString(R.string.mustlog), Toast.LENGTH_SHORT).show();
                     startActivity(loginIntent);

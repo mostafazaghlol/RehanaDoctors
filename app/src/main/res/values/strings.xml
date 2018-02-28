@@ -119,4 +119,6 @@
     <string name="comment">comment</string>
     <string name="totalcount">total count</string>
     <string name="search">search</string>
+    <string name="add_cost">add cost</string>
+    <string name="chooseoneoftwooptions">Choose One Of The Two Options</string>
 </resources>
