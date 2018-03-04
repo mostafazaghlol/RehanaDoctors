@@ -32,9 +32,9 @@ import org.json.JSONObject;
 
 public class Login extends AppCompatActivity {
     //initalization of variables.
-    TextView textViewCreateOne,forgetpass;
+    TextView forgetpass;
     EditText editTextuser, editTextpass;
-    String user, pass, lan = "2";
+    String user, pass, lan = "1";
     Button loginbt;
     CheckBox checkBoxRemember;
     SharedPreferences.Editor editor;
@@ -94,24 +94,12 @@ public class Login extends AppCompatActivity {
                     editor.putString("password", pass);
                     editor.commit();
                 }
-                if (user.equals("admin") && pass.equals("123123")) {
-                    editor.putInt("login", 1);
-                    editor.commit();
-                    finish();
-                }
-//                login(user, pass, lan);
-            }
-        });
-        //open Signup activity .
-        textViewCreateOne = (TextView) findViewById(R.id.createOne);
-        final Intent i = new Intent(this, Signup.class);
 
-        textViewCreateOne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(i);
+                login(user, pass, lan);
             }
         });
+
+
     }
 
 
@@ -136,7 +124,6 @@ public class Login extends AppCompatActivity {
                                     .show();
                         } else if (messsageid == 1) {
                             Toast.makeText(Login.this, message, Toast.LENGTH_SHORT).show();
-
                             editor.putInt("login",1);
                             JSONArray jsondataArray = jsonResponse.getJSONArray("data");
                             JSONObject jsondataObject = jsondataArray.getJSONObject(0);
@@ -158,7 +145,7 @@ public class Login extends AppCompatActivity {
                 }
             }
         };
-        LoginRequest loginPatiRequest = new LoginRequest(user, pass, images.lang, responseListener);
+        LoginRequest loginPatiRequest = new LoginRequest(user, pass, "2", responseListener);
         RequestQueue queue = Volley.newRequestQueue(Login.this);
         queue.add(loginPatiRequest);
 

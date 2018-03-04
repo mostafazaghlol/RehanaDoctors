@@ -60,8 +60,8 @@ public class RVAdapteroldcal extends RecyclerView.Adapter<RVAdapteroldcal.Person
 
     @Override
     public void onBindViewHolder(final PersonViewHolder personViewHolder, int i) {
-        personViewHolder.Cost.setText("cost : " + calculates.get(i).cost);
-        personViewHolder.id.setText("id : " + calculates.get(i).id);
+        personViewHolder.Cost.setText("Cost : " + calculates.get(i).cost);
+        personViewHolder.id.setText("Comment : " + calculates.get(i).id);
         id = calculates.get(i).calid;
         Picasso.with(mContext).load(calculates.get(i).image).into(personViewHolder.calphoto);
         personViewHolder.oldButton.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +76,7 @@ public class RVAdapteroldcal extends RecyclerView.Adapter<RVAdapteroldcal.Person
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 String message = jsonArray.getJSONObject(i).getString("message");
                                 Toast.makeText(mContext, "" + message, Toast.LENGTH_SHORT).show();
-//                                personViewHolder.linearLayout.setVisibility(View.GONE);
+                                personViewHolder.linearLayout.setVisibility(View.GONE);
 //                                Toast.makeText(mContext, ""+id, Toast.LENGTH_SHORT).show();
                             }
 

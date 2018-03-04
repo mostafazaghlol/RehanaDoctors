@@ -3,13 +3,14 @@
     package="com.mostafa.android.rehanadoctors">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcherx"
+        android:icon="@mipmap/ic_launcher00"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcherx"
-        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_launcher00"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity android:name=".splach">
@@ -22,8 +23,8 @@
         <activity android:name=".login.Login" />
         <activity android:name=".login.Signup" />
         <activity android:name=".calculations.calculationsActivity" />
-        <activity android:name=".coupon.couponActivity"/>
-        
+        <activity android:name=".coupon.couponActivity" />
+        <activity android:name=".AboutDevelopersActivity"></activity>
     </application>
 
 </manifest>

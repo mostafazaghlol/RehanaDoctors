@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginRequest extends StringRequest {
-    private static final String LOGIN_REQUEST_URL = "http://raihana-eg.com/site_api/api/login_api";
+    private static final String LOGIN_REQUEST_URL = "http://raihana-eg.com/site_api/api/dr_login_api";
     private Map<String, String> params;
 
     public LoginRequest(String username, String pass, String lang, Response.Listener<String> listener) {
